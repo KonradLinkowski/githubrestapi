@@ -1,0 +1,25 @@
+{
+  "name": "githubrestapi",
+  "version": "1.0.0",
+  "description": "A simple github rest service.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kon1997/githubrestapi.git"
+  },
+  "author": "Konrad Linkowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kon1997/githubrestapi/issues"
+  },
+  "homepage": "https://github.com/Kon1997/githubrestapi#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  }
+}

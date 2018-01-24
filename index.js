@@ -29,8 +29,20 @@ function getInfo(user, repo) {
 }
 
 // server response
-app.get('/', (req, res) => {
-    res.end("Test")
+app.get('/repositories/:owner/:repository', (req, res) => {
+  getInfo(req.params.owner, req.params.repository)
+  .then(repo => {
+    res.json({
+      "fullName": repo.full_name,
+      "description": repo.description,
+      "cloneUrl": repo.clone_url,
+      "stars": repo.stargazers_count,
+      "createdAt": repo.created_at
+    })
+  })
+  .catch(err => {
+    console.error(err)
+  })
 });
 
 // run the server
